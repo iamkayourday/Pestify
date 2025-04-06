@@ -1,8 +1,11 @@
 import React from 'react'
+import Top from './Top'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Top />
+    </div>
   )
 }
 
