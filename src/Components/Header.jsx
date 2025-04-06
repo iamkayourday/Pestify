@@ -13,35 +13,35 @@ const Header = () => {
 
   // Animation variants
   const mobileMenuVariants = {
-    open: { 
+    open: {
       opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         duration: 0.3,
-        ease: "easeInOut"
-      }
+        ease: "easeInOut",
+      },
     },
-    closed: { 
+    closed: {
       opacity: 0,
       y: -20,
-      transition: { 
+      transition: {
         duration: 0.3,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   const navItemVariants = {
     hidden: { y: -10, opacity: 0 },
-    visible: { 
-      y: 0, 
+    visible: {
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 10
-      }
-    }
+        damping: 10,
+      },
+    },
   };
 
   return (
@@ -51,7 +51,7 @@ const Header = () => {
         <nav>
           <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-10">
             {/* Logo Section */}
-            <motion.div 
+            <motion.div
               className="flex items-center space-x-2"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ const Header = () => {
             </motion.div>
 
             {/* Desktop Navigation Links */}
-            <motion.ul 
+            <motion.ul
               className="hidden md:flex space-x-6"
               initial="hidden"
               animate="visible"
@@ -111,10 +111,7 @@ const Header = () => {
             </motion.ul>
 
             {/* Mobile Menu Button */}
-            <motion.div 
-              className="md:hidden z-50"
-              whileTap={{ scale: 0.9 }}
-            >
+            <motion.div className="md:hidden z-50" whileTap={{ scale: 0.9 }}>
               <button
                 onClick={toggleMobileMenu}
                 className="text-black hover:text-gray-600 focus:outline-none"
@@ -138,7 +135,7 @@ const Header = () => {
                 initial="closed"
                 animate="open"
                 exit="closed"
-                style={{ top: "100%" }} 
+                style={{ top: "100%" }}
               >
                 <div className="container mx-auto px-4">
                   <ul className="flex flex-col space-y-4 text-center w-full py-4">

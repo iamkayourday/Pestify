@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="md:px-4 p-2 py-12 rounded-lg">
       {/* Reversed grid order with md:order-none to control mobile vs desktop layout */}
-      <div className="bg-[#030303] min-h-[80vh] rounded-2xl grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-12">
+      <div className="bg-[#030303] min-h-[80vh] rounded-2xl grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 md:p-12">
         {/* Right side - now first on mobile */}
         <div className="flex items-center justify-center order-first md:order-none">
           <div className="relative w-full h-full max-w-lg">
