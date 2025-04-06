@@ -14,16 +14,16 @@ const Header = () => {
   // Animation variants
   const mobileMenuVariants = {
     open: { 
-      height: "auto",
       opacity: 1,
+      y: 0,
       transition: { 
         duration: 0.3,
         ease: "easeInOut"
       }
     },
     closed: { 
-      height: 0,
       opacity: 0,
+      y: -20,
       transition: { 
         duration: 0.3,
         ease: "easeInOut"
@@ -47,7 +47,7 @@ const Header = () => {
   return (
     <>
       <Top />
-      <header className="sticky top-0 z-50 bg-white max-w-7xl mx-auto">
+      <header className="bg-white max-w-7xl mx-auto sticky top-0 z-50 md:static">
         <nav>
           <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-10">
             {/* Logo Section */}
@@ -112,7 +112,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <motion.div 
-              className="md:hidden"
+              className="md:hidden z-50"
               whileTap={{ scale: 0.9 }}
             >
               <button
@@ -133,13 +133,14 @@ const Header = () => {
           <AnimatePresence>
             {isMobileMenuOpen && (
               <motion.div
-                className="md:hidden bg-white overflow-hidden"
+                className="md:hidden absolute left-0 right-0 bg-white shadow-lg z-40"
                 variants={mobileMenuVariants}
                 initial="closed"
                 animate="open"
                 exit="closed"
+                style={{ top: "100%" }} 
               >
-                <div className="container mx-auto px-4 flex justify-center items-center">
+                <div className="container mx-auto px-4">
                   <ul className="flex flex-col space-y-4 text-center w-full py-4">
                     <motion.li
                       initial={{ y: -10, opacity: 0 }}
