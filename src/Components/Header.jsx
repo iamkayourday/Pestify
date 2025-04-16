@@ -51,15 +51,23 @@ const Header = () => {
         <nav>
           <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-10">
             {/* Logo Section */}
-            <motion.div
-              className="flex items-center space-x-2"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <img src="/pest.png" alt="Pestora Logo" className="h-6 w-auto" />
-              <h1 className="text-xl font-medium text-black">Pestora</h1>
-            </motion.div>
+            <Link to="/">
+              <motion.div
+                className="flex items-center space-x-2"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <img
+                  src="/pest.png"
+                  alt="Pestora Logo"
+                  className="h-6 w-auto"
+                />
+                <h1 className="text-lg font-medium text-black hover:text-gray-600">
+                  Pestora
+                </h1>
+              </motion.div>
+            </Link>
 
             {/* Desktop Navigation Links */}
             <motion.ul
