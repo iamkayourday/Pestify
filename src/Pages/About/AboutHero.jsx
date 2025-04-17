@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 const AboutHero = () => {
   return (
     <section className="px-4 py-8 md:py-12 rounded-lg">
-      <div className="bg-[#030303] min-h-[90vh] md:min-h-[40vh] lg:min-h-[80vh] rounded-2xl flex flex-col md:flex-row items-center p-4 sm:p-6 md:p-8 lg:px-40 py-20 md:py-0">
+      <div className="bg-[#030303] min-h-[90vh] md:min-h-[40vh] lg:min-h-[70vh] rounded-2xl flex flex-col md:flex-row items-center p-4 sm:p-6 md:p-8 lg:px-40 py-20 md:py-0">
         {/* Content Section */}
         <div className="flex-1 flex flex-col justify-center space-y-4 md:space-y-6 text-white md:pr-8 lg:pr-12">
           {/* Main Heading */}
